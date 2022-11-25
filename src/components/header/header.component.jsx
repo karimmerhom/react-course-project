@@ -1,10 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Outlet , Link} from 'react-router-dom';
+import {UserContext} from '../../contexts/user.contexts'
 import {ReactComponent as CrownLogo} from '../../assets/crown.svg';
 import './header.styles.scss';
 
-const Header = () => (
+const Header = () => {
 
+    const {currentUser} = useContext(UserContext);
+    console.log(currentUser)
+
+    return (
     <Fragment>
         <div className='navigation'>
             <Link className='nav-link' to='/'>
@@ -21,7 +26,7 @@ const Header = () => (
         </div>
         <Outlet/>
     </Fragment>
-
-);
+    );
+    };
 
 export default Header;

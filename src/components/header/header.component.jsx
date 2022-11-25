@@ -17,7 +17,7 @@ const Header = () => {
                 <CrownLogo className='logo-container'/>
             </Link>
             <div className='nav-links-container'>
-                <Link className='nav-link' to='/atuh'>
+                <Link className='nav-link' to='/shop'>
                     SHOP
                 </Link>
                 {

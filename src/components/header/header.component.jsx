@@ -11,10 +11,10 @@ const Header = () => (
                 <CrownLogo className='logo-container'/>
             </Link>
             <div className='nav-links-container'>
-                <Link className='nav-link' to='/signIn'>
+                <Link className='nav-link' to='/atuh'>
                     SHOP
                 </Link>
-                <Link className='nav-link' to='/signIn'>
+                <Link className='nav-link' to='/auth'>
                     SIGN IN
                 </Link>
             </div>

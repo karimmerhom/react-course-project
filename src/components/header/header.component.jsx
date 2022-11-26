@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from 'react';
 import { Outlet , Link} from 'react-router-dom';
 import {UserContext} from '../../contexts/user.contexts'
+import {CartContext} from '../../contexts/cart.contexts'
 import {ReactComponent as CrownLogo} from '../../assets/crown.svg';
 import {signOutUser} from '../../utils/firebase/firebase.utils'
 import CartIcon from '../cart-icon/cart-icon.component'
@@ -10,6 +11,7 @@ import './header.styles.scss';
 const Header = () => {
 
     const {currentUser} = useContext(UserContext);
+    const {isCartOpen} = useContext(CartContext);
 
 
     return (
@@ -32,7 +34,7 @@ const Header = () => {
                 }
                 <CartIcon/>
             </div>
-            <CartDropdown/>
+            {isCartOpen && <CartDropdown/>}
         </div>
         <Outlet/>
     </Fragment>

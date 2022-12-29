@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Directory from '../../components/directory/directory.component'
 import './HomePage.styles.scss';
+
 
 const HomePage = () => (
     

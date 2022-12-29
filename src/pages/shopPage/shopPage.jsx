@@ -3,8 +3,8 @@ import { ProductsContext } from '../../contexts/product.contexts';
 import  ProductCard  from '../../components/product-card/product-card.component'
 import './ShopPage.styles.scss'
 
+
 const Shop = () => {
-    const {products} = useContext(ProductsContext);
 
     return(
         <div className="products-container">
